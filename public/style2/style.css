@@ -1,0 +1,276 @@
+@media(min-width:800px){
+
+hgroup::after{
+    display:block;
+    content: " ";
+    border-bottom: 1px solid #bdbdbd;
+}
+figure{
+   position: absolute;
+   display: inline-block;
+   top: 9%;
+    margin-left: 70%;
+    transform: rotate(-15deg);
+}
+header{grid-area: header;}
+.content{grid-area: content1;}
+.content>section:nth-child(1){grid-area: about;}/*1*/
+.content>section:nth-child(2){grid-area: competencies;}/*1*/
+.content>section:nth-child(3){grid-area: experiences;}
+#competencies>h3{grid-area: competencies-title;}
+.skills-primary{grid-area: skills-primary;}
+.skills-secondary{grid-area: skills-secondary;}
+#experiences>h3{grid-area: experiences-title;}
+#experiences>div:nth-child(1){grid-area: experiences1;}
+#experiences>div:nth-child(2){grid-area: experiences2;}
+#education>h3{grid-area:education-title;}
+#education>div:nth-child(1){grid-area: education1;}
+#education>div:nth-child(2){grid-area: education2;}
+#hobbies>h3{grid-area:hobbies-title;}
+#hobbies>ul{grid-area:hobbies;}
+#\#wrapper{
+    display: grid;
+    
+    grid-template-areas:
+    'header'
+    'content1';
+    margin-top: 3%; 
+    margin-left:6% ;
+    margin-right:6% ;
+    margin-bottom:3% ;  
+}
+.content{
+    display: grid;
+    grid-template-areas: 
+    'about '
+    'competencies'
+    'experiences'
+    ;
+    
+}
+#competencies{
+    display: grid;
+    grid-template-columns: 13% 87%; 
+    grid-template-areas:
+    'competencies-title skills-primary  '
+    'competencies-title skills-secondary'
+    ;
+    margin-top: 8%;
+}
+.experience{
+    display: grid;  
+    grid-template-rows: 15% 85%;
+    grid-template-areas:
+        ' title date'  
+        'experiences1 experiences1 ';
+}
+#experiences{
+    display: grid;
+    grid-template-columns: 13% 87%;
+   
+    grid-template-areas:
+    'experiences-title experiences1  '
+    'experiences-title experiences2 '
+    ;
+}
+#education{
+    display: grid;
+    grid-template-columns: 13% 87%;
+    grid-template-areas:
+    'education-title education2 '
+    'education-title education1 ';
+}
+#hobbies{
+    display: grid;
+    grid-template-columns: 13% 87%;
+    grid-template-areas:
+         'hobbies-title hobbies'      ;
+}
+.skills {
+    
+    display: flex;
+}
+section{
+
+    margin-top: 3%;
+    
+}
+
+
+section>div{
+    content: " ";
+    display: block;
+    
+    border-left: 2px solid   #8b8b8b;
+    padding-left: 1.5%;
+    
+    
+   
+
+}
+section>ul{
+    content: " ";
+    display: block;
+    
+    border-left: 2px solid   #8b8b8b;
+    padding-left: 5%;
+   
+    
+
+}
+h3{
+    margin-top: 0%;
+}
+
+.experience-institution{
+    display: none;
+}
+.experience-details{
+   color: #cacaca;
+
+}
+.experience>h4{
+    margin-top: 0%;
+}
+/*.experience-description{
+    margin-top: 4%;
+}*/
+
+ul{
+    margin-top: 0%;
+}
+
+.skills>div{
+    background-color: #008080;
+    margin-right:2%;
+    margin-bottom:2%;
+    color: white;
+    width: 12%;
+
+}
+
+.skills-primary .skill{
+    margin-left:20px;
+    border:1px solid #008080;
+    background-color:#008080;
+    margin-top:10px;
+    height:45px;
+    width:13vw;
+    color:white;
+    font-size:21px;
+    
+}
+.skills-secondary .skill{
+    margin-left:20px;
+    border:1px solid #008080;
+    background-color:#008080;
+    font-size:16px;
+    height:40px;
+    width:13vw;
+    color:white;
+}
+.skills span{
+    margin-left:2px;
+   
+   
+   
+}
+
+[data-skill="5"]:nth-child(1)::after{
+    content: "★★★";
+    margin-left: 3vw;
+}
+[data-skill="9"]::after{
+    content: "★★★★★";
+    margin-left:3vw;
+}
+[data-skill="7"]::after{
+    content: "★★★★";
+    margin-left: 2vw;
+}
+[data-skill="3"]::after{
+    content: "★★";
+    margin-left:6vw;
+}
+[data-skill="1"]::after{
+    content: "★";
+    margin-left:3vw;
+}
+[data-skill="5"]:nth-child(2)::after{
+    content: "★★★";
+    margin-left:6vw;
+} 
+
+.contact-email >.contact-value> a::before {
+    content: "";
+    background: url(../images/email.png);
+    background-size: cover;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  
+.contact-phone a::before {
+    content: "";
+    background: url(../images/phone.png);
+    background-size: cover;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  
+.contact-github a::before {
+    content: "";
+    background: url(../images/github.png);
+    background-size: cover;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  
+.contact-facebook a::before {
+    content: "";
+    background: url(../images/facebook.png);
+    background-size: cover;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+#contact{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.contact-type{
+    display: none;
+
+}
+#contact>h3{
+    display: none;
+
+}
+.contact-value::after{
+    display: none;
+}
+}
+
+
+
+.experience-type{
+    color: #4aa4a4;
+}
+.experience-date-separator{
+    color: #50a7a7;
+}
+hgroup>h2{
+    display: none;
+}
+#about>h3{
+    display:none;
+}
+#about>p{
+    padding-right: 25%;
+    color: #bdbdbd;
+    font-style: oblique;
+}
