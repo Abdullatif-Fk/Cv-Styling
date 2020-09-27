@@ -59,8 +59,10 @@ header > div>hgroup{
     
 }
 figure{
-    margin-left:5%
+    margin-left:5%;
+   
 }
+
 dt{
     color:white;
 }
